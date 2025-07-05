@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            background-color: #05060f;
+            color: #bad6f7;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-container {
+            background: rgba(152, 192, 239, 0.06);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(186, 215, 247, 0.18);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background: linear-gradient(0deg, #bad1f1 30%, #9dc3f7 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        input[type="text"], input[type="password"], select, input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #c2ccff33;
+            border-radius: 5px;
+            background-color: #121521;
+            color: #bad6f7;
+        }
+
+        select option {
+            background-color: #121521;
+            color: #bad6f7;
+        }
+
+        input[type="submit"] {
+            background-color: #121521;
+            border: 1px solid #c2ccff33;
+            color: #bad6f7;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #05060f;
+            box-shadow: 0 0 10px #c2ccff91;
+        }
+
+        .signup-container p {
+            margin-top: 20px;
+            color: #9dc3f7;
+        }
+
+        .signup-container a {
+            color: #d8ecf8;
+            text-decoration: none;
+        }
+
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form action="signup.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <!-- Role Select -->
+            <select name="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+            </select>
+            
+            <input type="submit" value="Sign Up">
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+        <a href="index.html">HOME</a>
+    </div>
+
+</body>
+</html>
